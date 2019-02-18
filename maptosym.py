@@ -79,7 +79,7 @@ def gen_output_filename(input_filename):
 
 def make_cli():
     parser = argparse.ArgumentParser(
-            description="TODO"
+            description="Generates no$gmb symbole files (.sym) from GBDK and SDCC / ASxxxx map file (.map). "  # noqa
             )
 
     parser.add_argument(

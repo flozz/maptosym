@@ -1,6 +1,6 @@
 # maptosym
 
-maptosym generates no$gmb symbole files (`.sym`) from [GBDK](http://gbdk.sourceforge.net/) (old) and [SDCC / ASxxxx](http://sdcc.sourceforge.net/) (newer) map file (`.map`).
+maptosym generates no$gmb symbole files (`.sym`) from [GBDK](http://gbdk.sourceforge.net/) (old) and [SDCC / ASxxxx](http://sdcc.sourceforge.net/) (newer) map files (`.map`).
 
 The symbole file allows debuggers like no$gmb or [BGB](http://bgb.bircd.org/) to display symboles names when debugging a GameBoy program.
 
@@ -20,7 +20,8 @@ You will find example input `.map` and generated `.sym` files in the `examples/`
 
     usage: maptosym.py [-h] [-v] map_file
 
-    TODO
+    Generates no$gmb symbole files (.sym) from GBDK and SDCC / ASxxxx map file
+    (.map).
 
     positional arguments:
       map_file       The input .map file
@@ -32,4 +33,5 @@ You will find example input `.map` and generated `.sym` files in the `examples/`
 
 ## Changelog
 
+* **1.0.1:** Fixes program description in CLI
 * **1.0.0:** Initial release
