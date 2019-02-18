@@ -1,0 +1,283 @@
+AREA .  .ABS.
+	RADIX HEX
+	BASE 0000
+	SIZE 0000
+	ATTRIB ABS OVR
+	GLOBALS
+		l__HEAP	0000
+		l__BSEG	0000
+		l_.  .ABS.	0000
+		l__GSFINAL	0000
+		l__ISEG	0000
+		s_.  .ABS.	0000
+		s__HEADER	0000
+		l__XSEG	0000
+		.init	0000
+		l__OVERLAY	0000
+		l__LIT	0000
+		l__GSINIT	0000
+		l__GSINITTAIL	0001
+		l__DATA	000C
+		l__BSS	005C
+		l__BASE	018E
+		l__HOME	01AC
+		l__HEADER	01E1
+		s__CODE	0200
+		l__CODE	3F9A
+		s__HOME	419A
+		s__BASE	4346
+		s__GSINITTAIL	44D4
+		s__LIT	44D4
+		s__GSINIT	44D4
+		s__GSFINAL	44D5
+		.OAM	C000
+		s__DATA	C0A0
+		s__BSS	C0AC
+		s__HEAP	C108
+		s__BSEG	C108
+		s__ISEG	C108
+		s__XSEG	C108
+		s__OVERLAY	C108
+		.STACK	E000
+		.refresh_OAM	FF80
+AREA _CODE
+	RADIX HEX
+	BASE 0200
+	SIZE 3F9A
+	ATTRIB REL CON
+	GLOBALS
+		_BG_TILESET	0200
+		_map_bg_set	1200
+		_map_bg_load_chunk	1236
+		_map_goto	12AD
+		_map_scroll	1316
+		_main	13F0
+		_BG_TILEMAP	1490
+		__mulschar_rrx_s	4050
+		__mulschar_rrx_hds	4057
+		__muluchar_rrx_s	4063
+		__mulsint_rrx_s	4070
+		__muluint_rrx_s	4070
+		__mulsint_rrx_hds	407C
+		__muluint_rrx_hds	407C
+		__muluchar_rrx_hds	407C
+		__divschar_rrx_s	4098
+		__divschar_rrx_hds	409F
+		__modschar_rrx_s	40A6
+		__modschar_rrx_hds	40AD
+		__divsint_rrx_s	40B2
+		__divsint_rrx_hds	40BE
+		__modsint_rrx_s	40C6
+		__modsint_rrx_hds	40D2
+		__divuchar_rrx_s	40D8
+		__divuchar_rrx_hds	40DF
+		__moduchar_rrx_s	40E6
+		__moduchar_rrx_hds	40ED
+		__divuint_rrx_s	40F2
+		__divuint_rrx_hds	40FE
+		__moduint_rrx_s	4106
+		__moduint_rrx_hds	4112
+		.mod8	4118
+		.div8	4118
+		.mod16	4120
+		.div16	4120
+		.modu8	415A
+		.divu8	415A
+		.modu16	415D
+		.divu16	415D
+AREA _HEADER
+	RADIX HEX
+	BASE 0000
+	SIZE 01E1
+	ATTRIB ABS OVR
+	GLOBALS
+		_exit	01D2
+AREA _HOME
+	RADIX HEX
+	BASE 419A
+	SIZE 01AC
+	ATTRIB REL CON
+	GLOBALS
+		.set_mode	419A
+		.remove_VBL	41AA
+		.remove_LCD	41B0
+		.remove_TIM	41B6
+		.remove_SIO	41BC
+		.remove_JOY	41C2
+		.add_VBL	41C8
+		.add_LCD	41CE
+		.add_TIM	41D4
+		.add_SIO	41DA
+		.add_JOY	41E0
+		.remove_int	41E6
+		.add_int	4206
+		.wait_vbl_done	4222
+		_wait_vbl_done	4222
+		_display_off	4239
+		.display_off	4239
+		.serial_IO	425A
+		_mode	4289
+		_get_mode	4292
+		_enable_interrupts	4297
+		_disable_interrupts	4299
+		_reset	429B
+		.reset	429B
+		_set_interrupts	42A1
+		_remove_VBL	42AC
+		_remove_LCD	42B7
+		_remove_TIM	42C2
+		_remove_SIO	42CD
+		_remove_JOY	42D8
+		_add_VBL	42E3
+		_add_LCD	42EE
+		_add_TIM	42F9
+		_add_SIO	4304
+		_add_JOY	430F
+		_clock	431A
+		__printTStates	4323
+		banked_call	4324
+		banked_ret	433D
+AREA _BASE
+	RADIX HEX
+	BASE 4346
+	SIZE 018E
+	ATTRIB REL CON
+	GLOBALS
+		_scroll_bkg	4346
+		.padup	435C
+		_waitpadup	435C
+		.jpad	436C
+		.wait_pad	4399
+		_joypad	43A0
+		_waitpad	43A5
+		_move_bkg	43AF
+		_set_win_data	43B8
+		_set_bkg_data	43B8
+		_set_sprite_data	4405
+		.copy_vram	4434
+		_get_data	4443
+		_set_data	4443
+		_set_bkg_tiles	4456
+		.set_xy_wtt	446A
+		.set_xy_btt	447B
+		.set_xy_tt	448A
+		_set_tiles	44BB
+AREA _LIT
+	RADIX HEX
+	BASE 44D4
+	SIZE 0000
+	ATTRIB REL CON
+AREA _GSINIT
+	RADIX HEX
+	BASE 44D4
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		gsinit	44D4
+AREA _GSINITTAIL
+	RADIX HEX
+	BASE 44D4
+	SIZE 0001
+	ATTRIB REL CON
+AREA _GSFINAL
+	RADIX HEX
+	BASE 44D5
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA
+	RADIX HEX
+	BASE C0A0
+	SIZE 000C
+	ATTRIB REL CON
+	GLOBALS
+		__map_x	C0A0
+		__map_y	C0A2
+		__map_bg	C0A4
+		__map_bg_width	C0A6
+		__map_bg_height	C0A8
+		__map_bg_x	C0AA
+		__map_bg_y	C0AB
+AREA _BSS
+	RADIX HEX
+	BASE C0AC
+	SIZE 005C
+	ATTRIB REL CON
+	GLOBALS
+		__cpu	C0AC
+		.mode	C0AD
+		__io_out	C0AE
+		__io_in	C0AF
+		__io_status	C0B0
+		.vbl_done	C0B1
+		__current_bank	C0B2
+		_sys_time	C0B3
+		.sys_time	C0B3
+		.int_0x40	C0B5
+		.int_0x48	C0C5
+		.int_0x50	C0D5
+		.int_0x58	C0E5
+		.int_0x60	C0F5
+AREA _HEAP
+	RADIX HEX
+	BASE C108
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		_malloc_heap_start	C108
+AREA _OVERLAY
+	RADIX HEX
+	BASE C108
+	SIZE 0000
+	ATTRIB REL CON
+AREA _ISEG
+	RADIX HEX
+	BASE C108
+	SIZE 0000
+	ATTRIB REL CON
+AREA _BSEG
+	RADIX HEX
+	BASE C108
+	SIZE 0000
+	ATTRIB REL CON
+AREA _XSEG
+	RADIX HEX
+	BASE C108
+	SIZE 0000
+	ATTRIB REL CON
+MODULES
+	FILE ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/crt0.o
+		NAME Runtime
+	FILE src/background.tileset.o
+		NAME lcc274550
+	FILE src/main.o
+		NAME lcc97930
+	FILE src/background.tilemap.o
+		NAME lcc274680
+LIBRARIES
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE scroll_b.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
+		MODULE mul.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
+		MODULE div.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE pad.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE mv_bkg.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_data.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE cpy_data.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_bk_t.o
+	LIBRARY ./gbdk/build/ppc-unknown-linux2.2/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE set_xy_t.o
+USERBASEDEF
+	_CODE=0x0200
+	_DATA=0xC0A0
+	_CODE_1=0x4000
+USERGLOBALDEF
+	.OAM=0xC000
+	.STACK=0xE000
+	.refresh_OAM=0xFF80
+	.init=0x0000
